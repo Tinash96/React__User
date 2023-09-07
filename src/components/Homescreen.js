@@ -1,43 +1,4 @@
-// import React from 'react';
-// import '../App.css';
-// // import List from './List';
-// import {  useNavigate } from 'react-router-dom';
 
-
-// function Homescreen (){
-
-
-//     const navigate = useNavigate()
-    
-
-//     return (
-//         <div className="container">
-//           <button className="button"onClick={() => navigate("/create")} >Add Member</button>
-        
-          
-        
-//         </div>
-
-
-
-//       );
-
-
-    
-      
-      
-      
-
-
-
-// }
-
-// export default Homescreen;
-
-
-// HomeScreen.js
-
-// HomeScreen.js
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
