@@ -69,7 +69,7 @@ function Create() {
     
 
     
-    // navigate('/', { newUser });
+    
   };
 
   const handleFileChange = (event) => {
