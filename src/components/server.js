@@ -1,20 +1,20 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const multer = require('multer'); // Import multer for handling file uploads
+const multer = require('multer'); 
 const fs = require('fs');
 
 app.use(bodyParser.json());
 
-// Configure multer for storing uploaded images
+
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, 'uploads'); // Save images in the "uploads" directory
+    cb(null, 'uploads'); 
   },
   filename: (req, file, cb) => {
     const timestamp = Date.now();
     const extension = file.originalname.split('.').pop();
-    cb(null, `${timestamp}.${extension}`); // Set a unique filename for the image
+    cb(null, `${timestamp}.${extension}`); 
   },
 });
 
@@ -27,7 +27,7 @@ app.post('/users', upload.single('image'), (req, res) => {
     id: Date.now().toString(),
     fullName,
     jobId,
-    image: req.file ? req.file.filename : null, // Get the filename from req.file
+    image: req.file ? req.file.filename : null,
   };
 
   const users = JSON.parse(fs.readFileSync('db.json', 'utf8'));
